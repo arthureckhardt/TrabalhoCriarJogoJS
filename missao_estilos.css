@@ -1,0 +1,290 @@
+body {
+        margin:0;
+        padding:20px;
+        color:white;
+        background:#0b1220;
+        font-family:Arial,sans-serif;
+        text-align:center
+}
+
+.pagina {width:min(900px,100%);
+        margin:0 auto
+}
+
+h1 {
+        margin:0;
+        color:#8bffe0;
+        font-size:28px
+}
+
+.subtitulo, .instrucoes {
+        color:#b8c9df
+}
+
+.painel {
+        margin:15px auto
+}
+
+.caixaPainel {
+        display:inline-block;
+        width:190px;
+        max-width:38%;
+        margin:0 8px;
+        padding:10px;
+        border:2px solid #5ce6d0;
+        background:#102538;
+        box-sizing:border-box
+}
+
+.caixaPainel p {
+        margin:0 0 5px;
+        color:#91b5c8;
+        font-size:12px
+}
+
+.caixaPainel span {
+        color:white;
+        font-size:23px
+}
+
+#tela {
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        height:500px;border:2px solid #53677f;
+        box-sizing:border-box;
+        background:#18263b url("imagens/fundoJogo.png") center/cover
+}
+
+#chao {
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:45px;
+        border-top:3px solid #78f0d3;
+        box-sizing:border-box;
+        pointer-events:none
+}
+
+#obstaculo, .obstaculo, #inimigo, .inimigo, #inimigoAtirador, #jogador, #raio, #raio2, #tiroInimigo, #meteorito, .meteorito {
+        position:absolute
+}
+
+#cristaisFundo {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.cristal-fundo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.obstaculo {
+        top:210px;
+        left:900px;
+        width:50px;
+        height:50px;
+        
+}
+
+#obstaculoSprite {
+        width:65px;
+        height:65px;
+        animation: girar 8s infinite linear;
+
+        position: absolute;
+        top: -15%;
+        left: -15%;
+        transform: translate(-50%, -50%);
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#meteorito, .meteorito {
+        top: 210px;
+        left: 900px;
+        width: 30px;
+        height: 30px;
+}
+
+#meteoritoSprite {
+        width: 40px;
+        height: 40px;
+
+        position: absolute;
+        top: 45%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+
+}
+
+#meteorito img, .meteorito img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: girar 4s infinite linear;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#obstaculo img, .obstaculo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#inimigo, .inimigo {
+    top: 205px;
+    left: 1100px;
+    width: 42px;
+    height: 40px;
+}
+#inimigoSprite {
+        width: 70px;
+        height: 60px;  
+        background-size: cover;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+#inimigo img, .inimigo img,
+#inimigoAtirador img, #jogador img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#inimigoAtirador {
+        top: 100px;
+        left: 1400px;
+        width: 45px;
+        height: 45px
+}
+
+#atiradorSprite {
+        width:65px;
+        height:65px;
+
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+#jogador {
+        left:35px;
+        top:225px;
+        width:40px;
+        height:40px;
+}
+#jogadorSprite {
+        width: 65px;
+        height: 65px;
+
+        background-size: cover;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+
+#raio {
+        display:none;
+        width:30px;
+        height:10px;
+        border-radius:4px;
+        background:#9affdf;
+        box-shadow:0 0 10px #9affdf
+}
+
+#raio2 {
+        display:none;
+        width:30px;
+        height:10px;
+        border-radius:4px;
+        background:#9affdf;
+        box-shadow:0 0 10px #9affdf
+}
+
+#tiroInimigo {
+        display:none;
+        width:18px;
+        height:8px;
+        border-radius:5px;
+        background:#ff6b7a;
+        box-shadow:0 0 10px #ff4055
+}
+
+#mensagem {
+        position:absolute;
+        z-index:10;
+        top:50%;
+        left:50%;
+        width:min(400px,calc(100% - 48px));
+        padding:20px;
+        border:1px solid white;
+        background:#0c1728;
+        box-sizing:border-box;
+        transform:translate(-50%,-50%)
+}
+
+#mensagem h2 {
+        color:#8bffe0
+}
+
+#mensagem p {
+        color:#c0cee0;
+        line-height:1.45
+}
+
+button {
+        padding:10px 20px;
+        border:0;
+        color:#08131f;
+        background:#8bffe0;
+        font-size:14px;
+        cursor:pointer
+}
+button:hover {
+        background:#b7ffef
+}
+
+.escondido {
+        display:none!important
+}
+@media(max-width:600px){
+        body{padding:10px}
+        #tela{height:420px}
+        #jogador{left:18px}
+        .caixaPainel{margin:0 3px;padding:8px 4px}
+}
+
+/* .inimigo, #naveAtiradora img, #obstaculo, .obstaculo, .meteorito, .meteoro, #inimigoAtirador {
+        background-color: #ffff; 
+} */

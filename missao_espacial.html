@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Espacial</title>
+    <link rel="stylesheet" href="missao_estilos.css">
+  </head>
+  <body>
+    <div class="pagina">
+      <h1>Missão Espacial</h1>
+      <p class="subtitulo">Defenda a nave e acerte as naves inimigas</p>
+
+      <div class="painel">
+        <div class="caixaPainel">
+          <p>PONTOS</p>
+          <span id="contador">0</span>
+        </div>
+        <div class="caixaPainel">
+          <p>TEMPO</p>
+          <span id="tempo">30</span> s
+        </div>
+      </div>
+
+      <div id="tela">
+        <div id="cristaisFundo"></div>
+
+        <div id="obstaculo" class="obstaculo">
+          <div id="obstaculoSprite">
+            <img src="imagens/meteoro.png" alt="Meteoro">
+          </div>
+        </div>
+
+        <div id="meteorito" class="meteorito">
+          <div id="meteoritoSprite">
+            <img src="imagens/meteorito.png" alt="Meteorito">
+          </div>
+        </div>
+
+        <div id="inimigo" class="inimigo">
+          <div id="inimigoSprite">
+            <img src="imagens/naveInimiga.png" alt="Nave inimiga">
+          </div>
+        </div>
+
+        <div id="inimigoAtirador">
+          <div id="atiradorSprite">
+            <img src="imagens/naveAtiradora.png" alt="Nave inimiga atiradora">
+          </div>
+        </div>
+
+        <div id="jogador">
+          <div id="jogadorSprite">
+            <img id="naveJogador" src="imagens/naveJogador.png" alt="Sua nave">
+          </div>
+        </div>
+
+        <div id="raio"></div>
+        <div id="raio2"></div>
+        <div id="tiroInimigo"></div>
+        <div id="chao"></div>
+
+        <div id="mensagem">
+          <h2 id="tituloMensagem">A tripulação precisa de você!</h2>
+          <p id="textoMensagem">
+            Use as setas ↑ e ↓ (ou W e S) para mover a nave. Aperte ESPAÇO para disparar. Destrua as naves inimigas e desvie dos tiros!
+          </p>
+        <button id="botaoIniciar">Iniciar missão</button>
+        </div>
+
+      </div>
+
+      <p class="instrucoes">Mover: ↑ / ↓ ou W / S · Disparar: ESPAÇO</p>
+
+    </div>
+    
+    <script src="missao_scripts.js"></script>
+  </body>
+</html>
