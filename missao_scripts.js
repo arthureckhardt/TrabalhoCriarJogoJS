@@ -316,7 +316,7 @@ function atualizarJogo() {
      }
 
      if(tiroInimigo.style.display === "block") {
-          tiroInimigo.style.left = tiroInimigo.offsetLeft + tiroVX + "px";
+          tiroInimigo.style.left = tiroInimigo.offsetLeft + (tiroVX - 5) + "px";
           tiroInimigo.style.top = tiroInimigo.offsetTop + tiroVY + "px";
 
           if(colidiu(tiroInimigo, jogador)) {
